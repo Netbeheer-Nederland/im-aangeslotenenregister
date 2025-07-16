@@ -1,7 +1,7 @@
 id: https://netbeheernederland.nl/conceptueelinformatiemodel/aangeslotenenregister
 name: aangeslotenenregister
 title: Aangeslotenenregister
-description: Het aangeslotenenregister bevat (beschrijvingen van) consumenten en ondernemingen die beschikken over een elektriciteits- of gasaansluiting in Nederland of net over de grens.
+description: Het aangeslotenenregister bevat (beschrijvingen van) consumenten, ondernemingen en maatschappelijke activiteiten die beschikken over een elektriciteits- of gasaansluiting in Nederland of net over de grens.
 version: 1.0.0-draft
 default_range: Tekst
 prefixes:
