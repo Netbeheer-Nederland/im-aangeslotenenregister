@@ -36,12 +36,28 @@ classes:
       voorletters:
         description: afkorting van voornamen
         comments: Deze definitie is een samenvoeging van voorletters-1 en voorletters-n uit NEN 1888:2002.
+      bij:
+        range: Aansluiting
+        required: true
+        multivalued: false
+        annotations:
+          inverse_cardinality: 0..1
+      beschrijving van:
+        range: Onderneming
+        required: false
+        multivalued: false
+        annotations:
+          inverse_cardinality: *
+    unique_keys:
+      primary_key:
+        unique_key_slots:
+        - bij
   Correspondentieadres:
     description: postadres waar een aangeslotene zijn correspondentie wil ontvangen anders dan het aansluitadres
     annotations:
       nbility_object: Klant
     attributes:
-      deel van (Beschrijving van aangeslotene):
+      deel van:
         range: Beschrijving van aangeslotene
         required: true
         multivalued: false
@@ -67,7 +83,14 @@ classes:
     unique_keys:
       primary_key:
         unique_key_slots:
-        - deel van (Beschrijving van aangeslotene)
+        - deel van
+  Aansluiting:
+    annotations:
+      external_registry: Aansluitingenregister
+  Onderneming:
+    annotations:
+      external_registry: Handelsregister
+      
 types:
   Datum:
     description: kalenderdatum, zonder tijdsaanduiding
