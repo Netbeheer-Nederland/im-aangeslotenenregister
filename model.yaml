@@ -42,6 +42,12 @@ classes:
         multivalued: false
         annotations:
           inverse_cardinality: 0..1
+      bij (type = SAP):
+        range: Aansluiting
+        required: true
+        multivalued: false
+        annotations:
+          inverse_cardinality: 0..1
       beschrijving van:
         range: Onderneming
         required: false
@@ -85,6 +91,9 @@ classes:
         unique_key_slots:
         - deel van
   Aansluiting:
+    annotations:
+      external_registry: Aansluitingenregister  
+  Allocatiepunt bij aansluiting:
     annotations:
       external_registry: Aansluitingenregister
   Onderneming:
