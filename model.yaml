@@ -48,16 +48,20 @@ classes:
         multivalued: false
         annotations:
           inverse_cardinality: 0..1
+          related_relation: bij OF bij (type = SAP)
       beschrijving van:
         range: Onderneming
         required: false
         multivalued: false
         annotations:
           inverse_cardinality: "*"
+          related_relation: bij OF bij (type = SAP)
     unique_keys:
       primary_key:
         unique_key_slots:
         - bij
+    notes:
+      - XOR bij of bij (type = SAP)
   Correspondentieadres:
     description: postadres waar een aangeslotene zijn correspondentie wil ontvangen anders dan het aansluitadres
     annotations:
