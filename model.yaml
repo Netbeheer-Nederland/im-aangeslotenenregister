@@ -104,7 +104,14 @@ classes:
   Onderneming:
     annotations:
       external_registry: Handelsregister
-      
+  relatie Bij:
+    description: Relatie bij
+  relatie Bij type SAP:
+    description: Relatie bij SAP
+    attributes:
+      of:
+        range: relatie Bij
+        required: true
 types:
   Datum:
     description: kalenderdatum, zonder tijdsaanduiding
